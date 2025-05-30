@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Signup </title>
+  <link rel="stylesheet" href="Signupstyle.css">
+  <script>
+    function redirectToLogin() {
+      window.location.replace('./Login.html');
+    }
+  </script>
+</head>
+<body>
+  <div class="background-image"></div>
+
+  <div class="container">
+    <div id="signupForm">
+      <h2>Signup</h2>
+      <form >
+        
+        <input type="text" placeholder="First Name" required>
+        <input type="text" placeholder="Last Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="text" placeholder="Phone Number" required>
+        <input type="password" placeholder="Password" required>
+        <button type="button" onclick="redirectToLogin()">Sign Up</button>
+      </form>
+      <div class="toggle">
+        Already a user? <a href="./Login.html">Login here</a>
+      </div>
+    </div>
+  </div>
+  
+  <script src="Signupscript.js"></script>
+</body>
+</html>

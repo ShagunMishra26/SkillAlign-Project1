@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(to right, #0f172a, #1e293b);
+    color: #333;
+    position: relative;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #3b82f6;
+}
+
+.contact-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 100px auto 2rem;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact-left {
+    flex: 1;
+    padding: 3rem;
+    background: white;
+}
+
+.contact-right {
+    flex: 1;
+    background: #f8fafc;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-right img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-left-title h2 {
+    color: #1e293b;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-left-title hr {
+    width: 100px;
+    height: 4px;
+    background: #3b82f6;
+    border: none;
+    margin-bottom: 2rem;
+}
+
+.contact-inputs {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.contact-inputs:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+textarea.contact-inputs {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background: #3b82f6;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.2);
+}
+
+.home-link {
+    margin-top: 20px;
+}
+
+.home-link a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.home-link a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        margin-top: 80px;
+        width: 95%;
+    }
+
+    .contact-left, 
+    .contact-right {
+        padding: 2rem;
+    }
+
+    .contact-right {
+        padding-top: 0;
+    }
+
+    .contact-left-title h2 {
+        font-size: 1.75rem;
+    }
+} 

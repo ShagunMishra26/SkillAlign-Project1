@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - SkillAlign</title>
+    <link rel="stylesheet" href="contactusstyle.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-link">Home</a>
+    </nav>
+
+    <div class="contact-container">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+            <div class="contact-left-title">
+                <h2>Get in Touch</h2>
+                <hr>
+            </div>
+            <input type="hidden" name="access_key" value="14f7c2a4-0666-4244-bb28-aba91ff34cc6">
+            <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+            <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+            <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+        <div class="contact-right">
+            <img src="Aboutus.jpg" alt="Contact illustration">
+        </div>
+    </div>
+</body>
+</html>

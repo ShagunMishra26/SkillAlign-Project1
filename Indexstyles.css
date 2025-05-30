@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+}
+
+.content-overlay {
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
+  min-height: 100vh;
+  z-index: 1;
+}
+
+header {
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+.brand {
+  font-family: 'Righteous', cursive;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand img {
+  height: 40px;
+  width: auto;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #00f0ff;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 40px;
+  height: calc(100vh - 80px);
+}
+
+.hero-left {
+  flex: 1;
+  max-width: 50%;
+  backdrop-filter: blur(5px);
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.hero-left h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.hero-left span {
+  color: #00f0ff;
+}
+
+.hero-left p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  max-width: 90%;
+}
+
+.cta-buttons button {
+  padding: 12px 25px;
+  margin-right: 15px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #00f0ff;
+  color: #000;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid #00f0ff;
+}
+
+.cta-buttons button:hover {
+  transform: scale(1.05);
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-right img {
+  max-width: 90%;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hero-left {
+    max-width: 100%;
+  }
+} 

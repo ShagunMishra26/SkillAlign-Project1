@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Career Interest List</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="CILstyle.css">
+</head>
+<body class="min-h-screen flex items-center justify-center">
+  <div class="max-w-md w-full glass custom-shadow p-10 border-2 border-indigo-300 animate-fade-in">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-center bg-gradient-to-r from-indigo-500 via-pink-500 to-purple-500 bg-clip-text text-transparent mb-8 drop-shadow-2xl tracking-tight">
+      <span class="inline-block animate-bounce">🚀</span> Career Skill Assessor
+    </h1>
+    <p class="text-lg text-center text-indigo-600 mb-8 font-semibold">
+      Choose your career path and get an instant, visual skill assessment!
+    </p>
+    <form id="careerForm" class="space-y-8">
+      <div>
+        <label class="block text-xl font-bold mb-2 text-indigo-700" for="career">
+          <span class="inline-block align-middle mr-2">🎯</span>Career Options
+        </label>
+        <select id="career" name="career"
+          class="w-full px-6 py-4 rounded-xl border-2 border-indigo-300 bg-white/80 text-lg focus:outline-none focus:ring-4 focus:ring-indigo-400 transition font-semibold shadow"
+          required>
+          <option value="">-- Choose an option --</option>
+          <option value="python_developer">🐍 Python Developer</option>
+          <option value="frontend_developer">🎨 Frontend Developer</option>
+          <option value="backend_developer">🛠️ Backend Developer</option>
+          <option value="full_stack_developer">🧑‍💻 Full Stack Developer</option>
+          <option value="data_analyst">📊 Data Analyst</option>
+          <option value="data_scientist">🚀 Data Scientist</option>
+          <option value="app_developer">📱 App Developer</option>
+          <option value="cyber_security">🛡️ Cyber Security</option>
+          <option value="ai_specialist">🤖 AI Specialist</option>
+          <option value="machine_learning">📈 Machine Learning</option>
+        </select>
+      </div>
+      <button type="submit"
+        class="w-full bg-gradient-to-r from-indigo-500 via-pink-500 to-purple-500 text-white font-extrabold py-4 rounded-full shadow-lg hover:from-purple-500 hover:to-indigo-500 transition duration-300 transform hover:scale-105 text-xl tracking-wide btn-pulse flex items-center justify-center gap-2">
+        <span class="inline-block animate-pulse text-2xl">✨</span> Next
+      </button>
+    </form>
+    <div id="result" class="mt-8 text-center text-2xl font-bold text-indigo-700"></div>
+    <div id="chartContainer" class="mt-8 flex justify-center"></div>
+  </div>
+  <script src="CILscript.js"></script>
+</body>
+</html>
